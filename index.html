@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibeSync — Yasal</title>
+<style>
+  :root {
+    --bg-deep: #0a0a14;
+    --bg-mid: #15152a;
+    --text-primary: #f4f4ff;
+    --text-secondary: #9999b5;
+    --brand-start: #c046d6;
+    --brand-end: #ff5b8c;
+    --border: rgba(255, 255, 255, 0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    text-align: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .wordmark {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  nav a:hover, nav a.active {
+    color: var(--text-primary);
+    border-color: var(--brand-end);
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: var(--text-primary);
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 8px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  p, li {
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  .meta {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  a.link {
+    color: var(--brand-end);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a.link:hover { text-decoration: underline; }
+  .section { display: none; }
+  .section.active { display: block; }
+  footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="wordmark">VibeSync</div>
+    <nav>
+      <a href="#privacy" onclick="show('privacy')" id="nav-privacy" class="active">KVKK / Privacy</a>
+      <a href="#terms" onclick="show('terms')" id="nav-terms">Kullanım Koşulları</a>
+    </nav>
+  </header>
+
+  <section id="privacy" class="section active">
+    <h1>KVKK Aydınlatma Metni</h1>
+    <p class="meta">Son güncelleme: 1 Haziran 2026</p>
+
+    <h2>Veri Sorumlusu</h2>
+    <p>Bu uygulamayı işleten <strong>VibeSync</strong>, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusudur. İletişim: <a class="link" href="mailto:kvkk@vibesync.app">kvkk@vibesync.app</a></p>
+
+    <h2>İşlenen Kişisel Veriler</h2>
+    <ul>
+      <li><strong>Kimlik bilgileri:</strong> ad, kullanıcı adı, doğum tarihi</li>
+      <li><strong>İletişim bilgileri:</strong> e-posta</li>
+      <li><strong>Profil bilgileri:</strong> fotoğraflar, biyografi, ilgi alanları, tercih ettiğin etkinlikler, favori sanatçı/yönetmen/film listeleri</li>
+      <li><strong>Konum bilgisi:</strong> yalnızca seçtiğin şehir (GPS koordinatı saklanmaz)</li>
+      <li><strong>Uygulama içi etkileşim:</strong> katıldığın etkinlik havuzları, swipe/match ve mesaj kayıtları, blok/şikayet kayıtları</li>
+      <li><strong>Cihaz bilgileri:</strong> cihaz tipi, işletim sistemi sürümü, uygulama sürümü, bildirim token'ı</li>
+    </ul>
+
+    <h2>İşleme Amaçları</h2>
+    <ul>
+      <li>Hesap oluşturma ve kimlik doğrulama (Apple Sign In / Google Sign In)</li>
+      <li>Sana uygun etkinlik ve eşleşme önerileri sunmak</li>
+      <li>Eşleştiğin kişilerle mesajlaşmanı sağlamak</li>
+      <li>Topluluğun güvenliği için şikayetleri incelemek</li>
+      <li>Push bildirimleri göndermek (yeni eşleşme, mesaj, etkinlik hatırlatması)</li>
+      <li>Yasal yükümlülükleri yerine getirmek</li>
+    </ul>
+
+    <h2>Aktarım</h2>
+    <p>Kişisel verilerin <a class="link" href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> üzerinde barındırılır ve yalnızca yukarıdaki amaçlarla işlenir. Üçüncü taraf reklam veya analitik şirketleri ile paylaşılmaz. Bildirimler için Apple Push Notification Service kullanılır.</p>
+
+    <h2>Saklama Süresi</h2>
+    <p>Hesabını sildiğinde, profilin ve etkileşim verilerin makul süre içinde silinir veya anonimleştirilir. Yasal yükümlülükler (örn. şikayet kayıtları) gerektirdiği sürece anonim hâlde saklanabilir.</p>
+
+    <h2>Haklarınız</h2>
+    <p>KVKK madde 11 kapsamında verilerinize <strong>erişme, düzeltme, silme, aktarımına itiraz etme</strong> haklarınız bulunur. Talepleriniz için: <a class="link" href="mailto:kvkk@vibesync.app">kvkk@vibesync.app</a></p>
+
+    <p>Uygulama içinde her zaman <strong>Profil → Ayarlar → Hesabımı Sil</strong> yolundan hesabını kendin de silebilirsin.</p>
+  </section>
+
+  <section id="terms" class="section">
+    <h1>Kullanım Koşulları</h1>
+    <p class="meta">Son güncelleme: 1 Haziran 2026</p>
+
+    <h2>1. Kullanıcı Yaşı</h2>
+    <p>VibeSync yalnızca <strong>18 yaş ve üstü</strong> kullanıcılar içindir. 18 yaş altı kullanıcıların hesap açması yasaktır.</p>
+
+    <h2>2. Hesap ve Güvenlik</h2>
+    <p>Hesabını koruman senin sorumluluğundadır. Apple/Google ile giriş bilgilerini başkalarıyla paylaşma.</p>
+
+    <h2>3. Topluluk Kuralları</h2>
+    <ul>
+      <li>Taciz, nefret söylemi, ayrımcılık ve cinsel içerikli mesajlar yasaktır.</li>
+      <li>Sahte profil, başkasının fotoğrafı veya 18 yaş altı içeriği yüklemek yasaktır.</li>
+      <li>Spam, reklam ve dolandırıcılık girişimleri yasaktır.</li>
+    </ul>
+    <p>Kuralları ihlal eden hesaplar uyarısız kapatılabilir.</p>
+
+    <h2>4. Şikayet ve Engelleme</h2>
+    <p>Kullanıcıları sohbet ekranındaki "..." menüsünden şikayet edebilir veya engelleyebilirsin. Şikayetler 24 saat içinde incelenir.</p>
+
+    <h2>5. İçerik Sorumluluğu</h2>
+    <p>Profile yüklediğin fotoğraflardan ve gönderdiğin mesajlardan sen sorumlusun. VibeSync, kuralları ihlal eden içerikleri kaldırma hakkını saklı tutar.</p>
+
+    <h2>6. Hesap Silme</h2>
+    <p><strong>Ayarlar → Hesabımı Sil</strong> ile hesabını istediğin zaman silebilirsin. Silinen hesabın etkileşim geçmişi (eşleşmeler, mesajlar) geri alınamaz biçimde temizlenir.</p>
+
+    <h2>7. Abonelikler (VibeSync+)</h2>
+    <ul>
+      <li>VibeSync+ abonelikleri Apple App Store üzerinden satın alınır.</li>
+      <li>Ödeme, satın alma onayında Apple ID hesabına işlenir.</li>
+      <li>Abonelik, mevcut dönemin bitiminden en az 24 saat önce otomatik yenileme kapatılmadığı sürece otomatik yenilenir.</li>
+      <li>Yenileme ücreti, mevcut dönemin son 24 saati içinde Apple ID hesabına işlenir.</li>
+      <li>Abonelikleri yönetmek ve otomatik yenilemeyi kapatmak için: iOS Ayarlar → Apple ID → Abonelikler.</li>
+      <li>Ücretsiz deneme süresinin kullanılmayan kısmı, abonelik satın alındığında kaybolur.</li>
+    </ul>
+
+    <h2>8. Sorumluluk Reddi</h2>
+    <p>VibeSync, eşleştiğin kişilerin gerçek hayatta seninle buluşma sırasında oluşabilecek zararlardan sorumlu değildir. Buluşmalarını <strong>güvenli, kalabalık yerlerde</strong> planla.</p>
+
+    <h2>9. Değişiklikler</h2>
+    <p>Koşullar güncellendiğinde uygulama içinde ve bu sayfada bildirim alırsın.</p>
+
+    <h2>İletişim</h2>
+    <p>Sorular için: <a class="link" href="mailto:destek@vibesync.app">destek@vibesync.app</a></p>
+  </section>
+
+  <footer>
+    © 2026 VibeSync — İstanbul
+  </footer>
+</div>
+
+<script>
+  function show(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.getElementById('nav-' + id).classList.add('active');
+    history.replaceState(null, '', '#' + id);
+  }
+  // Hash deep-link support: /#terms açıkça kullanım koşullarına gider.
+  if (window.location.hash === '#terms') show('terms');
+</script>
+</body>
+</html>
