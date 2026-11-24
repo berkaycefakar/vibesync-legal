@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VibeSync daveti</title>
-<meta property="og:title" content="VibeSync'te bir davetin var">
+<title>Fuaye daveti</title>
+<meta property="og:title" content="Fuaye'de bir davetin var">
 <meta property="og:description" content="Aynı etkinliğe gidenlerle tanış, birlikte git.">
 <style>
   :root { --bg: #0a0514; --card: #f3ede4; --ink: #1a1024; --muted: #6b6077; --pink: #ff4fd8; --fg2: rgba(255,255,255,.7); }
@@ -28,7 +28,7 @@
 </head>
 <body>
 <main>
-  <div class="brand">VibeSync</div>
+  <div class="brand">Fuaye</div>
   <p class="lede">Bir arkadaşın seni bu etkinliğe çağırıyor. Aynı etkinliğe gidenlerle tanış, birlikte git.</p>
   <div class="ticket">
     <span class="label">Davet</span>
@@ -36,14 +36,14 @@
     <span class="meta" id="when" hidden></span>
     <span class="meta" id="place" hidden></span>
   </div>
-  <a class="btn" id="open" href="vibesync://">VibeSync'te aç</a>
-  <p class="note">Uygulama açılmadıysa henüz yüklü değildir. VibeSync şu an kapalı beta aşamasında; davet eden arkadaşından TestFlight linkini isteyebilirsin.</p>
+  <a class="btn" id="open" href="vibesync://">Fuaye'de aç</a>
+  <p class="note">Uygulama açılmadıysa henüz yüklü değildir. Fuaye şu an kapalı beta aşamasında; davet eden arkadaşından TestFlight linkini isteyebilirsin.</p>
 </main>
 <script>
   const q = new URLSearchParams(location.search);
   const set = (id, v) => { if (v) { const el = document.getElementById(id); el.textContent = v.slice(0, 160); el.hidden = false; } };
   set('title', q.get('t')); set('when', q.get('w')); set('place', q.get('p'));
-  if (q.get('t')) document.title = q.get('t').slice(0, 80) + ' · VibeSync';
+  if (q.get('t')) document.title = q.get('t').slice(0, 80) + ' · Fuaye';
   const id = q.get('id') || '';
   if (/^[0-9a-fA-F-]{36}$/.test(id)) {
     const deep = 'vibesync://event/' + id;
